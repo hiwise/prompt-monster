@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Prompt 打怪</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="scene"></canvas>
+
+<div id="hud">
+  <div class="col">
+    <div id="hearts"></div>
+    <button id="snd" class="pill" type="button">音效 开</button>
+  </div>
+  <div class="col end">
+    <div id="progress" class="pill"></div>
+    <div id="score" class="pill">0</div>
+  </div>
+</div>
+<div id="mplate" class="hidden">
+  <div id="mname"></div>
+  <div class="bar"><i id="mhp"></i></div>
+</div>
+<div id="combo"></div>
+<div id="hint">WASD / 方向键移动，或点击地面 · 走到怪物面前开战</div>
+<div id="toast"></div>
+<div id="flash"></div>
+<div id="fx"></div>
+
+<div id="battle" class="hidden">
+  <p id="qscene"></p>
+  <div id="opts"></div>
+  <div id="explain" class="hidden">
+    <p id="extext"></p>
+    <button id="next" type="button">继续</button>
+  </div>
+</div>
+
+<div id="overlay" class="title">
+  <div class="card">
+    <div class="kicker">提示词冒险 · 学习小游戏</div>
+    <h1 id="otitle">Prompt 打怪</h1>
+    <div id="obody">
+      <p>你是一名见习<b>提示词法师</b>。前方的小路上有三只怪物，它们就是和 AI 协作时最常见的三种翻车：</p>
+      <ul class="foes">
+        <li><i style="background:#b58cff"></i>幻觉幽灵</li>
+        <li><i style="background:#5fdc4e"></i>上下文溢出史莱姆</li>
+        <li><i style="background:#cf7440"></i>「已修复」机器人</li>
+      </ul>
+      <p>走到怪物面前，从四张<b>技能卡</b>里打出对症的那一张才能命中；打错会被反击。</p>
+    </div>
+    <button id="obtn" type="button">开始冒险</button>
+  </div>
+</div>
+
+<script src="lib/three.min.js"></script>
+<script src="questions.js"></script>
+<script src="js/kit.js"></script>
+<script src="js/models.js"></script>
+<script src="js/world.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
